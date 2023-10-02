@@ -1,0 +1,1 @@
+{"name":"Local: sub","url":"e:\\Skill Edu\\CS Fundamental\\Algorithm\\New folder\\.cph\\sub.cpp","tests":[{"id":1695459017873,"input":"3\n8\n23 45 34 12 0 3 1 4\n5\n10 20 30 40 50\n4\n1 2 3 10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Skill Edu\\CS Fundamental\\Algorithm\\New folder\\.cph\\sub.cpp","group":"local","local":true}

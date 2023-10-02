@@ -1,0 +1,1 @@
+{"name":"Local: p2","url":"e:\\Skill Edu\\CS Fundamental\\Algorithm\\New folder\\p2.cpp","tests":[{"id":1695388706729,"input":"5\n0110111\n0101010101\n1010101000\n0000\n111111","output":"3\n3\n2\n0\n6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Skill Edu\\CS Fundamental\\Algorithm\\New folder\\p2.cpp","group":"local","local":true}

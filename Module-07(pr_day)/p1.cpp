@@ -1,3 +1,9 @@
+/*
+Problem:  You will be given an undirected graph. Print its BFS traversal in reverse
+order. Consider root as 1.
+Note: In the explanation video there was a mistake, the explanation was for DFS
+traversal, but you have to do it using BFS traversal.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e5+7; vector<int> adj[N];
