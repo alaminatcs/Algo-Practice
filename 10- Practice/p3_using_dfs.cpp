@@ -23,9 +23,9 @@ bool isValid(int i, int j) {
 }
 
 bool dfs(int i, int j) {
-    if (isValid(i, j) && !visited[i][j] && adj[i][j]!='x') {
+    if (isValid(i, j) && !visited[i][j] && adj[i][j]!='#') {
         visited[i][j] = true; if(res) return res;
-        if (adj[i][j] == 'e') return res | true;
+        if (adj[i][j] == 'B') return res | true;
         for(auto d : direc) {
             int ni = i + d.first, nj = j + d.second; 
             res |= dfs(ni, nj);
@@ -36,13 +36,13 @@ bool dfs(int i, int j) {
 
 int main() {
     cin >> n >> m;
-    for (unsigned int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         string s; cin >> s; adj.push_back(s);
-        for (unsigned int j = 0; j < m; j++) {
-            if (s[j] == 's') {
+        for (int j = 0; j < m; j++) {
+            if (s[j] == 'A') {
                 si = i; sj = j;
             }
-            else if (s[j] == 'e') {
+            else if (s[j] == 'B') {
                 di = i; dj = j;
             }
         }

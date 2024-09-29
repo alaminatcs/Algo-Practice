@@ -16,6 +16,7 @@ typedef pair<int, int> pii;
 const int N = 1e3+5; vector<string> adj;
 int n, m, si = -1, sj = -1, di = -1, dj = -1;
 bool visited[N][N];
+
 vector<pii> direc = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
 
 bool isValid(int i, int j) {
@@ -31,8 +32,8 @@ bool bfs(int i, int j) {
             int ni = d.first + f.first;
             int nj = d.second + f.second;
             if (isValid(ni, nj) && !visited[ni][nj]) {
-                if (adj[ni][nj] != 'x') {
-                    if (adj[ni][nj] == 'e') return true;
+                if (adj[ni][nj] != '#') {
+                    if (adj[ni][nj] == 'B') return true;
                     visited[ni][nj] = true; q.push({ni, nj});
                 }
             }
@@ -43,17 +44,18 @@ bool bfs(int i, int j) {
 
 int main() {
     cin >> n >> m;
-    for (unsigned int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         string s; cin >> s; adj.push_back(s);
-        for (unsigned int j = 0; j < m; j++) {
-            if (s[j] == 's') {
+        for (int j = 0; j < m; j++) {
+            if (s[j] == 'A') {
                 si = i; sj = j;
             }
-            else if (s[j] == 'e') {
+            else if (s[j] == 'B') {
                 di = i; dj = j;
             }
         }
     }
+
     bool res = false;
     if (si != -1 && di != -1) {
         res = bfs(si, sj);
